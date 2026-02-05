@@ -1,0 +1,23 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@guillaumemmm/marquedefabrique": "2.1.0",
+    "d3": "7.9.0",
+    "data-navigator": "2.2.0"
+  },
+  "devDependencies": {
+    "vite": "n7.3.1"
+  }
+}

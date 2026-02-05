@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Bananas",
+    "price": 4,
+    "store": "Aldi"
+  },
+  {
+    "name": "Bananas",
+    "price": 3,
+    "store": "Carrefour"
+  },
+  {
+    "name": "Bananas",
+    "price": 2,
+    "store": "Metro"
+  },
+  {
+    "name": "Bananas",
+    "price": 6,
+    "store": "Tesco"
+  },
+  {
+    "name": "Bananas",
+    "price": 3,
+    "store": "Kaufland"
+  },
+  {
+    "name": "Apples",
+    "price": 3,
+    "store": "Aldi"
+  },
+  {
+    "name": "Apples",
+    "price": 5,
+    "store": "Carrefour"
+  },
+  {
+    "name": "Apples",
+    "price": 2,
+    "store": "Metro"
+  },
+  {
+    "name": "Apples",
+    "price": 6,
+    "store": "Tesco"
+  },
+  {
+    "name": "Apples",
+    "price": 5,
+    "store": "Kaufland"
+  },
+  {
+    "name": "Peach",
+    "price": 6,
+    "store": "Aldi"
+  },
+  {
+    "name": "Peach",
+    "price": 3,
+    "store": "Carrefour"
+  },
+  {
+    "name": "Peach",
+    "price": 3,
+    "store": "Metro"
+  },
+  {
+    "name": "Peach",
+    "price": 5,
+    "store": "Tesco"
+  },
+  {
+    "name": "Peach",
+    "price": 2,
+    "store": "Kaufland"
+  }
+]
