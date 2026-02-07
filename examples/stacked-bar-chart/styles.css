@@ -5,6 +5,12 @@ body {
     min-height: 100vh;
 }
 
+.back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
 .card-container {
     width: fit-content;
     padding: 10px;
@@ -106,6 +112,7 @@ body {
     stroke-width: 2px;
     stroke: var(--mdf-color-text-default);
     pointer-events: none;
+    stroke-linejoin: round;
 }
 
 @media (max-width: 750px) {
