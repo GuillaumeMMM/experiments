@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { fullyRoundedRectPath } from './utils';
+import { getRoundedRectPath } from './utils';
 
 export function buildChart(container, data) {
     // Declare the chart dimensions and margins
@@ -67,23 +67,14 @@ export function buildChart(container, data) {
             const barX = 0;
             const barY = 0;
             const radius = 20;
-            return fullyRoundedRectPath(barX, barY, barWidth, barHeight, radius);
-        });
-
-    barGroups.append('path').attr('class', 'bar-fr')
-        .attr('d', d => {
-            const barWidth = x.bandwidth() - 2 * barOutlineThickness;
-            const barHeight = innerHeight - y(d[1]) - 2 * barOutlineThickness;
-            const barX = barOutlineThickness;
-            const barY = barOutlineThickness;
-            const radius = 15;
-            return fullyRoundedRectPath(barX, barY, barWidth, barHeight, radius);
+            return getRoundedRectPath({ x: barX, y: barY, width: barWidth, height: barHeight }, radius, 0);
         });
 
     barGroups.append('text').attr('class', 'value')
         .attr('x', x.bandwidth() / 2)
         .attr('y', 25).text(d => d[1]);
 
+    //  Draw the focus ring that will move around along with the data-navigator navigation
     svg.append('path').attr('class', 'focus-ring').attr('id', 'focus-ring').attr('opacity', 0);
 
     // Append the SVG element to the container

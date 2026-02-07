@@ -1,5 +1,5 @@
 import dataNavigator from "data-navigator";
-import { fullyRoundedRectPath } from './utils';
+import { getRoundedRectPath } from './utils';
 
 function createStructure(data) {
     const structure = {
@@ -12,6 +12,7 @@ function createStructure(data) {
         }
     }
 
+    //  Create edges and nodes from the data
     let edges = []
     data.forEach((shop, i, self) => {
         const elementEdges = []
@@ -108,6 +109,8 @@ export function buildDataNavigator(chartContainer, data) {
             datum: nextNode
         });
 
+        //  Element currently focused
+        //  The focus ring will be moved there during this cycle
         const focusedChartElement = chartContainer.querySelector(`#bar-${renderedNode.id}`);
 
         renderedNode.addEventListener('blur', () => {
@@ -120,15 +123,13 @@ export function buildDataNavigator(chartContainer, data) {
             focusedChartElement.classList.add('active')
             const focusedChartElementRect = focusedChartElement.getBoundingClientRect();
             const chartElementRect = chartContainer.getBoundingClientRect();
-            const outlineOffset = 5;
-            const outlineRadius = 25;
+            const outlineOffset = 10;
+            const outlineRadius = 30;
+
+            //  Create a rounded outline around the focused rect (could also be a simple svg rect)
             focusRingElement.setAttribute('d',
-                fullyRoundedRectPath(
-                    focusedChartElementRect.x - chartElementRect.x - outlineOffset,
-                    focusedChartElementRect.y - chartElementRect.y - outlineOffset,
-                    focusedChartElementRect.width + 2 * outlineOffset,
-                    focusedChartElementRect.height + 2 * outlineOffset,
-                    outlineRadius
+                getRoundedRectPath(
+                    focusedChartElementRect, outlineRadius, outlineOffset, chartElementRect
                 )
             );
 

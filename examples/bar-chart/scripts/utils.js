@@ -1,17 +1,22 @@
-//  Transforms a rect into a rounded path data
-export function fullyRoundedRectPath(x, y, w, h, r) {
-    const radius = Math.min(r, w / 2, h / 2);
+//  Get the path of the rounded version of a rect
+export function getRoundedRectPath(rect, radius, offset, referenceRect) {
+  const x = rect.x - (referenceRect?.x || 0) - offset;
+  const y = rect.y - (referenceRect?.y || 0) - offset;
+  const width = rect.width + 2 * offset;
+  const height = rect.height + 2 * offset;
 
-    return `
-    M ${x + radius},${y}
-    H ${x + w - radius}
-    Q ${x + w},${y} ${x + w},${y + radius}
-    V ${y + h - radius}
-    Q ${x + w},${y + h} ${x + w - radius},${y + h}
-    H ${x + radius}
-    Q ${x},${y + h} ${x},${y + h - radius}
-    V ${y + radius}
-    Q ${x},${y} ${x + radius},${y}
+  const r = Math.min(radius, width / 2, height / 2);
+
+  return `
+    M ${x + r},${y}
+    H ${x + width - r}
+    Q ${x + width},${y} ${x + width},${y + r}
+    V ${y + height - r}
+    Q ${x + width},${y + height} ${x + width - r},${y + height}
+    H ${x + r}
+    Q ${x},${y + height} ${x},${y + height - r}
+    V ${y + r}
+    Q ${x},${y} ${x + r},${y}
     Z
   `;
 }

@@ -77,8 +77,10 @@ body {
 }
 
 .bar-bg {
-    fill: rgb(from var(--mdf-color-text-brand-primary-default) r g b / calc(alpha - 0.6));
-    transition: fill 0.2s ease-out;
+    fill: var(--mdf-color-text-brand-primary-default);
+    stroke: rgb(from var(--mdf-color-text-brand-primary-default) r g b / calc(alpha - 0.6));
+    stroke-width: 10px;
+    transition: stroke 0.2s ease-out;
 }
 
 .value {
@@ -91,12 +93,8 @@ body {
     opacity: 0;
 }
 
-.bar-fr {
-    fill: var(--mdf-color-text-brand-primary-default);
-}
-
 .bar:hover>.bar-bg {
-    fill: rgb(from var(--mdf-color-text-brand-primary-default) r g b / calc(alpha - 0.4));
+    stroke: rgb(from var(--mdf-color-text-brand-primary-default) r g b / calc(alpha - 0.4));
 }
 
 .bar:hover>.value,
