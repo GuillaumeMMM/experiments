@@ -1,77 +1,77 @@
 [
   {
-    "name": "Bananas",
+    "name": "Banana",
     "price": 4,
     "store": "Aldi"
   },
   {
-    "name": "Bananas",
+    "name": "Banana",
     "price": 3,
     "store": "Carrefour"
   },
   {
-    "name": "Bananas",
-    "price": 2,
+    "name": "Banana",
+    "price": 3,
     "store": "Metro"
   },
   {
-    "name": "Bananas",
+    "name": "Banana",
     "price": 6,
     "store": "Tesco"
   },
   {
-    "name": "Bananas",
+    "name": "Banana",
     "price": 3,
     "store": "Kaufland"
   },
   {
-    "name": "Apples",
+    "name": "Apple",
     "price": 3,
     "store": "Aldi"
   },
   {
-    "name": "Apples",
+    "name": "Apple",
     "price": 5,
     "store": "Carrefour"
   },
   {
-    "name": "Apples",
-    "price": 2,
+    "name": "Apple",
+    "price": 3,
     "store": "Metro"
   },
   {
-    "name": "Apples",
+    "name": "Apple",
     "price": 6,
     "store": "Tesco"
   },
   {
-    "name": "Apples",
+    "name": "Apple",
     "price": 5,
     "store": "Kaufland"
   },
   {
-    "name": "Peach",
+    "name": "Fig",
     "price": 6,
     "store": "Aldi"
   },
   {
-    "name": "Peach",
+    "name": "Fig",
     "price": 3,
     "store": "Carrefour"
   },
   {
-    "name": "Peach",
+    "name": "Fig",
     "price": 3,
     "store": "Metro"
   },
   {
-    "name": "Peach",
+    "name": "Fig",
     "price": 5,
     "store": "Tesco"
   },
   {
-    "name": "Peach",
-    "price": 2,
+    "name": "Fig",
+    "price": 3,
     "store": "Kaufland"
   }
 ]
