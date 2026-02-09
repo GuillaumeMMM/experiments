@@ -7,6 +7,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 ['bar-chart']: resolve(__dirname, 'examples/bar-chart/index.html'),
+                ['scatter-plot']: resolve(__dirname, 'examples/scatter-plot/index.html'),
             }
         }
     }
