@@ -3,7 +3,6 @@ import { geoGinzburg8 } from "d3-geo-projection";
 import { getRoundedRectPath } from "./utils";
 
 export async function buildChart(container, geoData, data) {
-    console.log(data)
     // Declare the chart dimensions and margins
     const maxWidth = window.innerWidth - 2 * 16 - 2 * 24 - 2 * 20;
     const width = Math.min(600, maxWidth);
