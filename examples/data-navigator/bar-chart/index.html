@@ -6,18 +6,18 @@
     <link type="image/png" rel="icon" href="../../assets/favicon.png" />
     <link
       rel="stylesheet"
-      href="../../node_modules/@guillaumemmm/marquedefabrique/dist/css/variables.css"
+      href="../../../node_modules/@guillaumemmm/marquedefabrique/dist/css/variables.css"
     />
     <link
       rel="stylesheet"
-      href="../../node_modules/@guillaumemmm/marquedefabrique/dist/css/reset.css"
+      href="../../../node_modules/@guillaumemmm/marquedefabrique/dist/css/reset.css"
     />
     <link
       rel="stylesheet"
-      href="../../node_modules/@guillaumemmm/marquedefabrique/dist/css/kit.css"
+      href="../../../node_modules/@guillaumemmm/marquedefabrique/dist/css/kit.css"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Scatter plot | Data Navigator</title>
+    <title>Bar chart | Data Navigator</title>
   </head>
   <body>
     <main>
@@ -25,16 +25,16 @@
       <div class="card-container">
         <div class="card mdf-block">
           <h1 class="mdf-title mdf-title4 title">
-            Scatter plot with data navigator and d3.js
+            Bar chart with data navigator and d3.js
           </h1>
           <p class="mdf-muted subtitle">
-            Money spent on groceries during one month (in €)
+            Amount of money spent this week at each grocery store (in €)
           </p>
           <div id="dn-root-chart" class="wrapper">
             <button type="button" id="dn-entry-button" class="entry-button">
               Enter the data navigation area
             </button>
-            <!-- Avoid the use of the `inert` attribute to not disable mouse events within the graph 
+            <!-- Avoid the use of the `inert` attribute to avoid disabeling mouse events within the graph 
           (for exemple for the display of a tooltip). -->
             <div id="chart" aria-hidden="true"></div>
             <p id="dn-exit-block" role="note" tabindex="-1" class="exit-block">
