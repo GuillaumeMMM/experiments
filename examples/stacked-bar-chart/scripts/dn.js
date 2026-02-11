@@ -40,7 +40,7 @@ function createStructure(data) {
 
         if (i > 0) {
             elementEdges.push({ source: self[i - 1][0], target: fruit, navigationRules: ["up", "down"] })
-            elementEdges.push({ source: self[i - 1][0], target: fruit, navigationRules: ["right", "left"] })
+            elementEdges.push({ source: self[i - 1][0], target: fruit, navigationRules: ["left", "right"] })
         }
 
         elementEdges.push({ source: fruit, target: `${Object.keys(stores)[0]}_${fruit}`, navigationRules: ["enter"] })

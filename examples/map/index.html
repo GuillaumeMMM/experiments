@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" rel="icon" href="../../assets/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/@guillaumemmm/marquedefabrique/dist/css/variables.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/@guillaumemmm/marquedefabrique/dist/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/@guillaumemmm/marquedefabrique/dist/css/kit.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Map | Data Navigator</title>
+  </head>
+  <body>
+    <main>
+      <a class="mdf-link back" href="../">Back to experiments</a>
+      <div class="card-container">
+        <div class="card mdf-block">
+          <h1 class="mdf-title mdf-title4 title">
+            Map with data navigator and d3.js
+          </h1>
+          <p class="mdf-muted subtitle">
+            Most frequent grocery store brands in European countries
+          </p>
+          <div id="dn-root-chart" class="wrapper">
+            <button type="button" id="dn-entry-button" class="entry-button">
+              Enter the data navigation area
+            </button>
+            <!-- Avoid the use of the `inert` attribute to avoid disabeling mouse events within the graph 
+          (for exemple for the display of a tooltip). -->
+            <div id="chart" aria-hidden="true"></div>
+            <p id="dn-exit-block" role="note" tabindex="-1" class="exit-block">
+              This is the end of the data navigation area.
+              <button
+                tabindex="0"
+                type="button"
+                id="dn-entry-button-back"
+                class="entry-button"
+              >
+                Go back to the beginning of the navigation
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

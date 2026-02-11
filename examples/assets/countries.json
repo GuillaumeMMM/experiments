@@ -1,0 +1,62 @@
+{
+  "FR": {
+    "id": "FR",
+    "name": "France",
+    "store": "Carrefour"
+  },
+  "DE": {
+    "id": "DE",
+    "name": "Germany",
+    "store": "Aldi"
+  },
+  "ES": {
+    "id": "ES",
+    "name": "Spain",
+    "store": "Carrefour"
+  },
+  "RO": {
+    "id": "RO",
+    "name": "Romania",
+    "store": "Carrefour"
+  },
+  "PL": {
+    "id": "PL",
+    "name": "Poland",
+    "store": "Aldi"
+  },
+  "FI": {
+    "id": "FI",
+    "name": "Finland",
+    "store": "Aldi"
+  },
+  "GR": {
+    "id": "GR",
+    "name": "Greece",
+    "store": "Auchan"
+  },
+  "AT": {
+    "id": "AT",
+    "name": "Austria",
+    "store": "Auchan"
+  },
+  "SE": {
+    "id": "SE",
+    "name": "Sweden",
+    "store": "Auchan"
+  },
+  "HR": {
+    "id": "HR",
+    "name": "Croatia",
+    "store": "Aldi"
+  },
+  "IE": {
+    "id": "IE",
+    "name": "Ireland",
+    "store": "Carrefour"
+  },
+  "LV": {
+    "id": "LV",
+    "name": "Latvia",
+    "store": "Auchan"
+  }
+}
