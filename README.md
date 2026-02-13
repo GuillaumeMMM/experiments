@@ -4,6 +4,8 @@ For now this repo only contains experiments using [d3.js](https://d3js.org/) alo
 
 These are only experiments. As such they do not always meet accessibility requirements from [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/), [EN 301 549](https://accessible-eu-centre.ec.europa.eu/content-corner/digital-library/en-3015492021-accessibility-requirements-ict-products-and-services_en) or [Chartability](https://chartability.github.io/POUR-CAF/).
 
+[Have a look at the the demo](https://gm-experiments.netlify.app/)
+
 ## Run the examples locally
 
 ```
