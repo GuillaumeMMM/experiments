@@ -12,3 +12,11 @@ These are only experiments. As such they do not always meet accessibility requir
 npm install
 npm start
 ```
+
+## Next steps
+
+- [ ] Create a reusable web-component for keyboard instructions
+- [ ] Make sure the navigation with data-navigator triggers the same visual info as a mouse navigation (tooltips)
+- [ ] Add a sankey diagram
+- [ ] Add a polar area chart
+- [ ] Add a stacked area chart
