@@ -1,5 +1,5 @@
 import { stack, union, index, max, scaleBand, scaleLinear, axisLeft, axisBottom, color, create } from "d3";
-import { getRoundedRectPath } from './utils';
+import { getRoundedRectPath } from "../../utils/outline";
 
 export function buildChart(container, data) {
     // Declare the chart dimensions and margins
@@ -96,7 +96,8 @@ export function buildChart(container, data) {
         .join('g')
         .attr('class', 'product-bar')
         .attr('transform', d => `translate(${x(d.data[0])}, ${y(d[1])})`)
-        .attr('data-dn-focus-id', d => `${d.data[0]}_${d.key}`);
+        .attr('data-dn-focus-id', d => `${d.data[0]}_${d.key}`)
+        .attr('data-dn-focus-group-id', d => d.key);
 
 
     productBarsGroup.append('path').attr('class', 'bar-bg').attr('stroke-width', barOutlineThickness).attr('stroke', d => color(categories[d.key].background).darker(0.5)).attr('fill', d => `url(#bar-fill-${d.key})`)

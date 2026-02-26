@@ -1,6 +1,6 @@
 import { create, geoPath, color } from "d3";
 import { geoGinzburg8 } from "d3-geo-projection";
-import { getRoundedRectPath } from "./utils";
+import { getRoundedRectPath } from "../../utils/outline";
 
 export async function buildChart(container, geoData, data) {
     // Declare the chart dimensions and margins

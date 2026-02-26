@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { getRoundedRectPath } from './utils';
+import { getRoundedRectPath } from "../../utils/outline";
 
 export function buildChart(container, data) {
     // Declare the chart dimensions and margins
@@ -57,7 +57,7 @@ export function buildChart(container, data) {
     //  Add one group for each bar
     const barGroups = bars.selectAll('.bar').data(data)
         .join('g').attr('class', 'bar')
-        .attr('id', d => `bar-${d[0]}`)
+        .attr('data-dn-focus-id', d => d[0])
         .attr('transform', d => `translate(${x(d[0])},${y(d[1])})`);
 
     barGroups.append('path').attr('class', 'bar-bg')
