@@ -71,12 +71,24 @@ export function buildDataNavigator({
 
         renderedNode.addEventListener('blur', () => {
             focusRingElement.style.opacity = 0;
-            focusedChartElements.forEach(el => el.classList.remove('active'));
+            focusedChartElements.forEach(el => {
+                if (nextNode.data.customEventNameToTriggerOnBlur) {
+                    el.dispatchEvent(new CustomEvent(nextNode.data.customEventNameToTriggerOnBlur))
+                }
+                el.classList.remove('active')
+            });
         });
 
         renderedNode.addEventListener('focus', () => {
             if (!focusedChartElements || focusedChartElements.length === 0) return
-            focusedChartElements.forEach(el => el.classList.add('active'));
+            focusedChartElements.forEach(el => {
+                el.classList.add('active')
+                if (nextNode.data.customEventNameToTriggerOnFocus) {
+                    el.dispatchEvent(new CustomEvent(nextNode.data.customEventNameToTriggerOnFocus))
+                }
+            });
+
+
             const focusedChartElementRects = focusedChartElements.map(el => el.getBoundingClientRect());
             const chartElementRect = chartContainerElement.getBoundingClientRect();
             const outlineOffset = 10;

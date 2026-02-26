@@ -72,7 +72,7 @@ export function buildChart(container, data) {
         .attr('data-dn-focus-id', d => `${d.id}`)
         .attr('data-dn-focus-group-id', d => `group_${d.groupId}`)
         .attr('cx', d => `${x(new Date(d.date))}px`).attr('cy', d => `${y(d.price)}px`)
-        .on('mouseenter', function (e, d) {
+        .on('activatedatapoint', function (e, d) {
             const currentCircleRect = this.getBoundingClientRect();
             const svgRect = svg.node().getBoundingClientRect();
 
@@ -86,8 +86,14 @@ export function buildChart(container, data) {
                 .style('text-align', displayTooltipLeft ? 'right' : 'left')
                 .attr('visibility', 'visible')
                 .html(`<div class="tooltip">${d.price}&nbsp;€</div>`);
-        }).on('mouseout', function () {
+        })
+        .on('deactivatedatapoint', function () {
             select('#tooltip-container').attr('visibility', 'hidden')
+        })
+        .on('mouseenter', function () {
+            this.dispatchEvent(new CustomEvent('activatedatapoint'))
+        }).on('mouseout', function () {
+            this.dispatchEvent(new CustomEvent('deactivatedatapoint'))
         });
 
     //  Focus ring element that will be moved around when navigation with data-navigator

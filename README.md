@@ -17,7 +17,7 @@ npm start
 
 - [x] Extract data-navigator lifecycle in util function
 - [ ] Create a reusable web-component for keyboard instructions
-- [ ] Make sure the navigation with data-navigator triggers the same visual info as a mouse navigation (tooltips)
+- [x] Make sure the navigation with data-navigator triggers the same visual info as a mouse navigation (tooltips)
 - [ ] Add a sankey diagram
 - [ ] Add a polar area chart
 - [ ] Add a stacked area chart

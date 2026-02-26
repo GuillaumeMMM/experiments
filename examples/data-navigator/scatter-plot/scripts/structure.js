@@ -65,7 +65,7 @@ export function createStructure(data) {
 
         elementEdges.push({ source: point.id, target: `group_${point.groupId}`, navigationRules: ["backspace"] })
 
-        structure.nodes[point.id] = { id: point.id, renderId: point.id, data: { type: 'level2', ...point }, edges: elementEdges.map(edge => `${edge.source}-${edge.target}`).concat(["any-exit"]), semantics: { label: `${point.price} euros spent on ${dateLongFormat.format(new Date(point.date))}` } }
+        structure.nodes[point.id] = { id: point.id, renderId: point.id, data: { type: 'level2', ...point, customEventNameToTriggerOnFocus: 'activatedatapoint', customEventNameToTriggerOnBlur: 'deactivatedatapoint' }, edges: elementEdges.map(edge => `${edge.source}-${edge.target}`).concat(["any-exit"]), semantics: { label: `${point.price} euros spent on ${dateLongFormat.format(new Date(point.date))}` } }
 
         edges = edges.concat(elementEdges)
     })
