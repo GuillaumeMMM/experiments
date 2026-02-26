@@ -16,7 +16,7 @@
     "@guillaumemmm/marquedefabrique": "2.1.0",
     "d3": "7.9.0",
     "d3-geo-projection": "4.0.0",
-    "data-navigator": "2.3.0"
+    "data-navigator": "2.3.1"
   },
   "devDependencies": {
     "vite": "n7.3.1"
