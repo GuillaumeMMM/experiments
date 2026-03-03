@@ -10,6 +10,7 @@ export default defineConfig({
                 ['stacked-bar-chart']: resolve(__dirname, 'examples/data-navigator/stacked-bar-chart/index.html'),
                 ['scatter-plot']: resolve(__dirname, 'examples/data-navigator/scatter-plot/index.html'),
                 ['map']: resolve(__dirname, 'examples/data-navigator/map/index.html'),
+                ['sankey']: resolve(__dirname, 'examples/data-navigator/sankey/index.html'),
             }
         }
     }

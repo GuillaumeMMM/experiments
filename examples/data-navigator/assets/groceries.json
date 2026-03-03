@@ -16,7 +16,7 @@
   },
   {
     "name": "Banana",
-    "price": 6,
+    "price": 10,
     "store": "Tesco"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "name": "Apple",
-    "price": 5,
+    "price": 8,
     "store": "Carrefour"
   },
   {
