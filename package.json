@@ -17,7 +17,7 @@
     "d3": "7.9.0",
     "d3-geo-projection": "4.0.0",
     "d3-sankey": "^0.12.3",
-    "data-navigator": "2.3.0"
+    "data-navigator": "2.4.1"
   },
   "devDependencies": {
     "vite": "n7.3.1"
