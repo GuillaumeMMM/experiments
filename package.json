@@ -13,7 +13,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@guillaumemmm/marquedefabrique": "2.1.0",
+    "@guillaumemmm/marquedefabrique": "2.2.1",
     "d3": "7.9.0",
     "d3-geo-projection": "4.0.0",
     "d3-sankey": "^0.12.3",
