@@ -10,6 +10,7 @@ export function buildDataNavigator({
     structure,
     focusRingDataAttribute = 'data-dn-focus-id',
     entryPointNodeId,
+    semantics,
 }) {
     exitBlockElement.style.display = 'none';
 
@@ -125,6 +126,9 @@ export function buildDataNavigator({
         suffixId: "data-navigator-schema",
         root: {
             id: "dn-root",
+        },
+        defaults: {
+            semantics: semantics,
         }
     });
 

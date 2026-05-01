@@ -24,3 +24,8 @@ body {
         stroke-width: 2px;
     }
 }
+
+.github-button {
+    display: inline-block;
+    margin-top: 1rem;
+}

@@ -16,9 +16,8 @@ npm start
 ## Next steps
 
 - [x] Extract data-navigator lifecycle in util function
-- [ ] Create a reusable web-component for keyboard instructions
+- [ ] Create a reusable web-component for keyboard instructions ([PR WIP](https://github.com/cmudig/data-navigator/pull/79))
 - [x] Make sure the navigation with data-navigator triggers the same visual info as a mouse navigation (tooltips)
 - [x] Add a sankey diagram
-- [ ] Add a polar area chart
-- [ ] Add a stacked area chart
-- [ ] Use d3.js + data-navigator dimensions api
+- [x] Add a stacked area chart
+- [x] Use d3.js + data-navigator dimensions api

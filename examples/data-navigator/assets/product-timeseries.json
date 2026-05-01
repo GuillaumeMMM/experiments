@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-01-01",
+    "products": [
+      { "name": "Banana", "price": 2 },
+      { "name": "Apple", "price": 2 },
+      { "name": "Fig", "price": 1 }
+    ]
+  },
+  {
+    "date": "2026-01-02",
+    "products": [
+      { "name": "Banana", "price": 5 },
+      { "name": "Apple", "price": 1 },
+      { "name": "Fig", "price": 1 }
+    ]
+  },
+  {
+    "date": "2026-01-03",
+    "products": [
+      { "name": "Banana", "price": 2 },
+      { "name": "Apple", "price": 2 },
+      { "name": "Fig", "price": 3 }
+    ]
+  },
+  {
+    "date": "2026-01-04",
+    "products": [
+      { "name": "Banana", "price": 2 },
+      { "name": "Apple", "price": 1 },
+      { "name": "Fig", "price": 4 }
+    ]
+  },
+  {
+    "date": "2026-01-05",
+    "products": [
+      { "name": "Banana", "price": 1 },
+      { "name": "Apple", "price": 3 },
+      { "name": "Fig", "price": 2 }
+    ]
+  }
+]

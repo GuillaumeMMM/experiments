@@ -11,6 +11,7 @@ export default defineConfig({
                 ['scatter-plot']: resolve(__dirname, 'examples/data-navigator/scatter-plot/index.html'),
                 ['map']: resolve(__dirname, 'examples/data-navigator/map/index.html'),
                 ['sankey']: resolve(__dirname, 'examples/data-navigator/sankey/index.html'),
+                ['stacked-area']: resolve(__dirname, 'examples/data-navigator/stacked-area/index.html'),
             }
         }
     }
