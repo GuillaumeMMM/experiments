@@ -1,10 +1,6 @@
-async function loadShaderSource(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to load shader: ${url}`);
-    }
-    return await response.text();
-}
+import fragShader from './shaders/shader.frag?raw'
+import vertShader from './shaders/shader.vert?raw'
+import moi from './moi.png'
 
 function loadImage(url) {
     return new Promise((resolve, reject) => {
@@ -15,8 +11,8 @@ function loadImage(url) {
     });
 }
 
-async function createTexture(gl, url) {
-    const img = await loadImage(url);
+async function createTexture(gl, imgRaw) {
+    const img = await loadImage(imgRaw);
     const texture = gl.createTexture();
 
     gl.bindTexture(gl.TEXTURE_2D, texture);
@@ -54,12 +50,12 @@ async function createTexture(gl, url) {
 
     const vertexShader = compileShader(
         gl.VERTEX_SHADER,
-        await loadShaderSource("./shaders/shader.vert")
+        vertShader
     );
 
     const fragmentShader = compileShader(
         gl.FRAGMENT_SHADER,
-        await loadShaderSource("./shaders/shader.frag")
+        fragShader
     );
 
     const program = gl.createProgram();
@@ -95,7 +91,7 @@ async function createTexture(gl, url) {
     gl.enableVertexAttribArray(uvLoc);
     gl.vertexAttribPointer(uvLoc, 2, gl.FLOAT, false, 16, 8);
 
-    const { texture, width, height } = await createTexture(gl, "./moi.png");
+    const { texture, width, height } = await createTexture(gl, moi);
 
     const uImageLoc = gl.getUniformLocation(program, "u_image");
     const uTimeLoc = gl.getUniformLocation(program, "u_time");
