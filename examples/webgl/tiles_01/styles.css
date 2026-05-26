@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(55, 0, 255);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  img {
+    width: 235px;
+    height: 584px;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    z-index: 2;
+    display: block;
+  }
+
+  canvas {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+}
