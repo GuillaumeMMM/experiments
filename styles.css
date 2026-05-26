@@ -25,6 +25,10 @@ body {
     }
 }
 
+.title {
+    margin-top: 2rem;
+}
+
 .github-button {
     display: inline-block;
     margin-top: 1rem;

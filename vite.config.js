@@ -12,6 +12,7 @@ export default defineConfig({
                 ['map']: resolve(__dirname, 'examples/data-navigator/map/index.html'),
                 ['sankey']: resolve(__dirname, 'examples/data-navigator/sankey/index.html'),
                 ['stacked-area']: resolve(__dirname, 'examples/data-navigator/stacked-area/index.html'),
+                ['tiles_01']: resolve(__dirname, 'examples/webgl/tiles_01/index.html'),
             }
         }
     }
