@@ -9,8 +9,6 @@ uniform sampler2D u_image;
 uniform vec2 u_imageResolution;
 uniform vec2 u_imagePosition;
 
-const float PI = 3.141592653589;
-
 void main() {
     float tileSize = 1. + sin(u_time) + 15. * distance(u_mouse, u_imagePosition + u_imageResolution / 2.) / u_imageResolution.x;
 
