@@ -4,97 +4,162 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="image/png" rel="icon" href="./assets/favicon.png" />
-    <style>
-      @import "node_modules/@guillaumemmm/marquedefabrique/dist/css/variables.css";
-      @import "node_modules/@guillaumemmm/marquedefabrique/dist/css/reset.css";
-      @import "node_modules/@guillaumemmm/marquedefabrique/dist/css/kit.css";
-    </style>
     <link rel="stylesheet" href="./styles.css" />
-    <title>Data Navigator d3.js examples</title>
+    <title>Web experiments by guillaumemeigniez.me</title>
+    <meta
+      name="description"
+      content="Web UI experiments by guillaumemeigniez.me. Contains data visualization library tests, WebGL shaders, animations and web UI components."
+    />
   </head>
   <body>
     <main>
-      <h1 class="mdf-title mdf-title3">Experiments</h1>
-      <a
-        class="mdf-button github-button"
-        href="https://github.com/GuillaumeMMM/experiments"
-        >Open on github</a
-      >
-      <h2 class="mdf-title mdf-title4 title">Data Navigator d3.js examples</h2>
-      <ul class="list">
-        <li class="mdf-block list-item">
-          <h2 class="mdf-title mdf-title4">Bar chart</h2>
-          <p class="detail">
-            Most basic example: a d3.js bar chart enhanced with the
-            data-navigator graph navigation paradigm.
-          </p>
-          <a href="/examples/data-navigator/bar-chart/" class="mdf-link"
-            >Open the demo
+      <div class="img-container" aria-hidden="true">
+        <img class="main-img" src="assets/img.webp" />
+        <img class="img-shadow" src="assets/img_shadow.webp" />
+      </div>
+      <h1 class="title mdf-title3">
+        <span>UI, WebGL, dataviz, animations experiments</span>
+        <span
+          >by
+          <a href="https://guillaumemeigniez.me" class="mdf-link title-link"
+            >guillaumemeigniez.me</a
+          ></span
+        >
+      </h1>
+      <div class="content">
+        <div class="section">
+          <h2 class="subtitle mdf-title4">Data Navigator + D3</h2>
+          <ul class="list">
+            <li class="list-item">
+              <a
+                href="/examples/data-navigator/bar-chart/"
+                class="mdf-link experiment-button"
+              >
+                <h3 class="mdf-title4">Bar chart</h3>
+                <p class="detail">Basic bar chart with data-navigator nav</p>
+              </a>
+            </li>
+            <li class="list-item">
+              <a
+                href="/examples/data-navigator/stacked-bar-chart/"
+                class="mdf-link experiment-button"
+              >
+                <h3 class="mdf-title4">Stacked bar chart</h3>
+                <p class="detail">
+                  Stacked bar chart with data-navigator nav across categories
+                </p>
+              </a>
+            </li>
+            <li class="list-item">
+              <a
+                href="/examples/data-navigator/scatter-plot/"
+                class="mdf-link experiment-button"
+              >
+                <h3 class="mdf-title4">Scratter plot</h3>
+                <p class="detail">
+                  Scatter plot chart with data-navigator nav and points groups
+                </p>
+              </a>
+            </li>
+
+            <li class="list-item">
+              <a
+                href="/examples/data-navigator/map/"
+                class="mdf-link experiment-button"
+              >
+                <h3 class="mdf-title4">Map</h3>
+                <p class="detail">
+                  Map with data-navigator nav bidirectional across countries
+                </p>
+              </a>
+            </li>
+
+            <li class="list-item">
+              <a
+                href="/examples/data-navigator/sankey/"
+                class="mdf-link experiment-button"
+              >
+                <h3 class="mdf-title4">Sankey diagram</h3>
+                <p class="detail">
+                  Sankey diagram chart with data-navigator nav across nodes
+                </p>
+              </a>
+            </li>
+
+            <li class="list-item">
+              <a
+                href="/examples/data-navigator/stacked-area/"
+                class="mdf-link experiment-button"
+              >
+                <h3 class="mdf-title4">Stacked area</h3>
+                <p class="detail">
+                  Stacked area chart with data-navigator nav + dimensions API
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2 class="subtitle mdf-title4">WebGL</h2>
+          <ul class="list">
+            <li class="list-item">
+              <a
+                href="/examples/webgl/blur/"
+                class="mdf-link experiment-button"
+              >
+                <h3 class="mdf-title4">Blur</h3>
+                <p class="detail">Pixelated blur effect</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a
+            class="mdf-link title-link"
+            href="https://github.com/GuillaumeMMM/experiments"
+            target="_blank"
+          >
+            Open in github&nbsp;<svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-label="New tab"
+            >
+              <path
+                d="M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z"
+              />
+              <polygon
+                points="20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2"
+              />
+            </svg>
           </a>
         </li>
-        <li class="mdf-block list-item">
-          <h2 class="mdf-title mdf-title4">Stacked bar chart</h2>
-          <p class="detail">
-            In this one the navigation is made a little more complex since the
-            user can navigate through each data point individually, but also
-            across categories of data.
-          </p>
-          <a href="/examples/data-navigator/stacked-bar-chart/" class="mdf-link"
-            >Open the demo</a
-          >
-        </li>
-        <li class="mdf-block list-item">
-          <h2 class="mdf-title mdf-title4">Scatter plot</h2>
-          <p class="detail">
-            This scatter plot demonstrates how it's possible to avoid having to
-            go through every data point when there's a lot. Here, three point
-            groups are created in the data-navigator graph, so that a user can
-            navigate quickly between data trends.
-          </p>
-          <a href="/examples/data-navigator/scatter-plot/" class="mdf-link"
-            >Open the demo</a
-          >
-        </li>
 
-        <li class="mdf-block list-item">
-          <h2 class="mdf-title mdf-title4">Map</h2>
-          <p class="detail">
-            The map lets the user navigate geographically acrross countires.
-          </p>
-          <a href="/examples/data-navigator/map/" class="mdf-link"
-            >Open the demo</a
+        <li>
+          <a
+            class="mdf-link title-link"
+            target="_blank"
+            href="https://guillaumemeigniez.me"
           >
-        </li>
-
-        <li class="mdf-block list-item">
-          <h2 class="mdf-title mdf-title4">Sankey diagram</h2>
-          <p class="detail">
-            Show how a flow could be navigated through with data-navigator.
-          </p>
-          <a href="/examples/data-navigator/sankey/" class="mdf-link"
-            >Open the demo</a
-          >
-        </li>
-
-        <li class="mdf-block list-item">
-          <h2 class="mdf-title mdf-title4">Stacked Area</h2>
-          <p class="detail">
-            Show how to use the data navigator dimensions API with d3.js.
-          </p>
-          <a href="/examples/data-navigator/stacked-area/" class="mdf-link"
-            >Open the demo</a
-          >
+            guillaumemeigniez.me&nbsp;<svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-label="New tab"
+            >
+              <path
+                d="M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z"
+              />
+              <polygon
+                points="20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2"
+              />
+            </svg>
+          </a>
         </li>
       </ul>
-
-      <h2 class="mdf-title mdf-title4 title">Webgl examples</h2>
-      <ul class="list">
-        <li class="mdf-block list-item">
-          <h2 class="mdf-title mdf-title4">Blur</h2>
-          <p class="detail">Pixelated blur effect.</p>
-          <a href="/examples/webgl/blur/" class="mdf-link">Open the demo </a>
-        </li>
-      </ul>
-    </main>
+    </footer>
   </body>
 </html>
