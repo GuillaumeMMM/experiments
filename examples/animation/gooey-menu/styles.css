@@ -1,0 +1,131 @@
+h1 {
+    margin-top: 2rem;
+}
+
+.gooey-menu {
+    background-color: var(--mdf-color-background-default);
+    border: 1px solid var(--mdf-color-border-muted);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    --duration: 3s;
+
+    &.menu-1 {
+        --color-from: rgb(0, 255, 13);
+        --color-to: rgb(0, 21, 255);
+
+        circle:nth-child(1) {
+            transform: translateX(0);
+            animation: move-l var(--duration) ease-in-out infinite;
+        }
+
+        circle:nth-child(2) {
+            transform: translateX(0);
+            animation: move-r var(--duration) ease-in-out infinite;
+        }
+
+        circle:nth-child(1) {
+            fill: var(--color-from);
+        }
+
+        circle:nth-child(2) {
+            fill: var(--color-to);
+        }
+    }
+
+    &.menu-2 {
+
+        .main-circle-group,
+        .circle-group,
+        .text-group {
+            --x: 50%;
+            --y: 50%;
+            --color: #02a533;
+            --text-size: 4px;
+            cursor: pointer;
+
+            transform: translate(var(--x), var(--y));
+
+            circle {
+                fill: var(--color);
+                transition: transform 0.1s ease-in-out;
+            }
+
+            text {
+                font-size: var(--text-size);
+                alignment-baseline: central;
+                text-anchor: middle;
+                fill: white;
+            }
+
+            &:hover {
+                circle {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .circle-move {
+            --x: 50%;
+            --y: 50%;
+            --color: #02a533;
+            transform: translate(var(--x), var(--y));
+            transition: transform 0.5s ease-in-out;
+
+            circle {
+                fill: var(--color);
+                transition: transform 0.1s ease-in-out, fill 0.5s ease-in-out;
+            }
+        }
+
+        text {
+            pointer-events: none;
+        }
+    }
+}
+
+.gooey-section,
+.gooey-section-2 {
+    p {
+        margin: 1rem 0;
+    }
+}
+
+.form label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+@keyframes move-l {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(60%);
+        fill: var(--color-to);
+    }
+
+    100% {
+        transform: translateX(0%);
+        fill: var(--color-from);
+    }
+}
+
+@keyframes move-r {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-60%);
+        fill: var(--color-from);
+    }
+
+    100% {
+        transform: translateX(0%);
+        fill: var(--color-to);
+    }
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" rel="icon" href="../../../assets/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <script type="module" src="./script.js" defer></script>
+    <title>Gooey Menu | Animation</title>
+  </head>
+  <body>
+    <main>
+      <a class="mdf-link back" href="../../../">Back to experiments</a>
+      <div class="gooey-content">
+        <h1 class="mdf-title3">Gooey Menu</h1>
+        <div class="gooey-section">
+          <p>
+            The gooey effect is the result of adding a filter on top of svg
+            elements. I first encountered it in 2016 thanks to Nadieh Bremer
+            post about
+            <a
+              href="https://www.visualcinnamon.com/2016/06/fun-data-visualizations-svg-gooey-effect/"
+              class="mdf-link"
+              >gooey effects for data visualization</a
+            >.
+          </p>
+          <div class="form">
+            <label for="intensity">
+              Gooey intensity <span class="value" id="intensity-value">2</span>
+              <input
+                type="range"
+                id="intensity"
+                name="volume"
+                value="2"
+                min="0"
+                max="10"
+              />
+            </label>
+          </div>
+          <svg
+            class="gooey-menu menu-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 50"
+          >
+            <defs>
+              <filter id="gooey" width="120" height="120" x="-10" y="-10">
+                <feGaussianBlur
+                  id="gaussian-blur"
+                  in="SourceGraphic"
+                  stdDeviation="2"
+                  result="blur"
+                ></feGaussianBlur>
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                  result="gooey"
+                ></feColorMatrix>
+              </filter>
+            </defs>
+            <g filter="url(#gooey)">
+              <circle cx="20" cy="25" r="10" fill="red"></circle>
+              <circle cx="80" cy="25" r="10" fill="blue"></circle>
+            </g>
+          </svg>
+        </div>
+
+        <div class="gooey-section">
+          <p>
+            This effect was used in
+            <a
+              href="https://clubbingfeels.guillaumemeigniez.me/"
+              class="mdf-link"
+              >clubbingfeels.guillaumemeigniez.me</a
+            >
+            to build menus with submenus for music genres.
+          </p>
+          <div class="form">
+            <label for="intensity-2">
+              Gooey intensity
+              <span class="value" id="intensity-value-2">2</span>
+              <input
+                type="range"
+                id="intensity-2"
+                name="volume"
+                value="2"
+                min="0"
+                max="10"
+              />
+            </label>
+          </div>
+          <svg
+            class="gooey-menu menu-2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+          >
+            <defs>
+              <filter id="gooey-2" width="120" height="120" x="-10" y="-10">
+                <feGaussianBlur
+                  id="gaussian-blur-2"
+                  in="SourceGraphic"
+                  stdDeviation="2"
+                  result="blur"
+                ></feGaussianBlur>
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                  result="gooey"
+                ></feColorMatrix>
+              </filter>
+            </defs>
+            <g filter="url(#gooey-2)">
+              <g class="circle-move">
+                <circle cx="0" cy="0" r="10" fill="#02a533"></circle>
+              </g>
+              <g class="main-circle-group" transform="translate(50, 50)">
+                <circle cx="0" cy="0" r="10" fill="#02a533"></circle>
+              </g>
+            </g>
+            <g class="texts">
+              <g class="main-circle-group" transform="translate(50, 50)">
+                <text>Home</text>
+              </g>
+            </g>
+          </svg>
+          <p>
+            I initially designed the menu in 2019 and did not take accessibility
+            and browser support into consideration. Building such a menu for
+            real would require (at least) to insert the buttons/links inside the
+            svg (which is never fun), to make sure that color contrasts are
+            sufficient, and to properly test keyboard and screen reader support
+            over all main browsers.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
