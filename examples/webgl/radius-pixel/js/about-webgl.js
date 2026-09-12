@@ -62,12 +62,12 @@ async function createTexture(gl, url) {
 
     const vertexShader = compileShader(
         gl.VERTEX_SHADER,
-        await loadShaderSource("js/shaders/shader.vert")
+        await loadShaderSource("shaders/shader.vert")
     );
 
     const fragmentShader = compileShader(
         gl.FRAGMENT_SHADER,
-        await loadShaderSource("js/shaders/shader.frag")
+        await loadShaderSource("shaders/shader.frag")
     );
 
     const program = gl.createProgram();
@@ -106,7 +106,7 @@ async function createTexture(gl, url) {
     gl.uniform1f(uApparitionTransitionTimeLoc, 1);
 
     let texture_bg = await createTexture(gl, `img/bg${Math.trunc(Math.random() * 5)}.webp`);
-    console.log('ici')
+
     uPixelIntensity = gl.getUniformLocation(program, "u_pixel_intensity");
     gl.uniform1f(uPixelIntensity, 10);
 

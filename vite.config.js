@@ -1,7 +1,18 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
+    plugins: [
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'examples/webgl/radius-pixel/{shaders,js,img}/*.{vert,frag,js,webp}',
+                    dest: ''
+                }
+            ]
+        })
+    ],
     build: {
         rollupOptions: {
             input: {
