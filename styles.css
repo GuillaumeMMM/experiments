@@ -94,7 +94,7 @@ footer {
     a.mdf-link,
     a.mdf-link:visited {
         padding: 0.5rem 1rem;
-        border-radius: 2rem;
+        border-radius: 5px;
         border: 1px solid var(--mdf-color-border-default);
         text-decoration: none;
         background-color: var(--mdf-color-background-default);
@@ -108,8 +108,8 @@ footer {
 
         svg {
             vertical-align: sub;
-            width: 1.2rem;
-            height: 1.2rem;
+            width: 1rem;
+            height: 1rem;
             margin-left: 5px;
         }
     }
