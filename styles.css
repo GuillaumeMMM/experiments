@@ -168,3 +168,9 @@ footer {
     display: inline-block;
     margin-top: 1rem;
 }
+
+@media (max-width: 600px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" rel="icon" href="../../../assets/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <script type="module" src="./script.js" defer></script>
+    <title>List Search | Animation</title>
+  </head>
+  <body>
+    <main>
+      <a class="mdf-link back" href="../../../">Back to experiments</a>
+      <h1 class="mdf-title3">List Search</h1>
+      <p class="info">
+        Experiment with the
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API"
+          class="mdf-link"
+          >View Transition API</a
+        >
+        to animate the position of items in a list. When the item is not among
+        the results it is relegated to another "discard" list below the search
+        results. Having 2 lists is important to let assistive technologies
+        differenciate results and discarded items. Thanks to the view
+        transition, most of the animation is managed by the browser.
+      </p>
+      <div class="container">
+        <div class="form">
+          <div class="search">
+            <div class="search-input-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                aria-label="Search"
+              >
+                <path
+                  fill="currentColor"
+                  d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
+                />
+              </svg>
+              <input
+                type="search"
+                id="search"
+                class="mdf-input-field"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p class="found"><span id="found-count"></span> results found</p>
+        <ul class="search-list" id="list"></ul>
+
+        <p class="not-found">
+          <span id="not-found-count"></span> cards did not match the search
+        </p>
+        <ul class="discard-list" id="discard"></ul>
+      </div>
+    </main>
+  </body>
+</html>

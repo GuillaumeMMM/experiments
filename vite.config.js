@@ -26,6 +26,7 @@ export default defineConfig({
                 ['tiles_01']: resolve(__dirname, 'examples/webgl/tiles_01/index.html'),
                 ['radius-pixel']: resolve(__dirname, 'examples/webgl/radius-pixel/index.html'),
                 ['gooey-menu']: resolve(__dirname, 'examples/animation/gooey-menu/index.html'),
+                ['list-search']: resolve(__dirname, 'examples/animation/list-search/index.html'),
             }
         }
     }
