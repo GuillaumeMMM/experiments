@@ -63,6 +63,10 @@ body {
     }
 }
 
+.info {
+    margin: 5px 0;
+}
+
 .title-link {
     background-color: transparent;
     text-underline-offset: 3px;
