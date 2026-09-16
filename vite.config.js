@@ -27,6 +27,7 @@ export default defineConfig({
                 ['radius-pixel']: resolve(__dirname, 'examples/webgl/radius-pixel/index.html'),
                 ['gooey-menu']: resolve(__dirname, 'examples/animation/gooey-menu/index.html'),
                 ['list-search']: resolve(__dirname, 'examples/animation/list-search/index.html'),
+                ['postcards']: resolve(__dirname, 'examples/animation/postcards/index.html'),
             }
         }
     }

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" rel="icon" href="../../../assets/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <script type="module" src="./script.js" defer></script>
+    <title>Postcards | Animation</title>
+  </head>
+  <body>
+    <main>
+      <a class="mdf-link back" href="../../../">Back to experiments</a>
+      <h1 class="mdf-title3">Animation</h1>
+      <p>
+        This animation was built for the postcards pages on
+        <a class="mdf-link" href="http://guillaumemeigniez.me"
+          >guillaumemeigniez.me</a
+        >. Hovering the cards with the mouse moves its overlapping sibling away.
+      </p>
+      <form>
+        <label for="move-away-intensity">
+          Move Away Intensity
+          <input
+            type="range"
+            id="move-away-intensity"
+            value="10"
+            min="0"
+            max="30"
+          />
+          <span class="value" id="move-away-intensity-value">10</span>
+        </label>
+
+        <label for="cards-count">
+          Cards Count
+          <input type="range" id="cards-count" value="20" min="10" max="40" />
+          <span class="value" id="cards-count-value">10</span>
+        </label>
+      </form>
+      <div class="container">
+        <ul class="points"></ul>
+      </div>
+    </main>
+  </body>
+</html>
