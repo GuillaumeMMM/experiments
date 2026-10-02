@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" rel="icon" href="../../../assets/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <script type="module" src="./script.js" defer></script>
+    <title>Algos | Downsampling</title>
+  </head>
+  <body>
+    <main>
+      <!-- DECIMATION -->
+      <a class="mdf-link back" href="../../../">Back to experiments</a>
+      <h2 class="mdf-title3">Decimation</h2>
+      <div class="form">
+        <label for="algo1-factor">
+          Decimation factor
+          <input type="range" id="algo1-factor" value="0" min="0" max="200" />
+          <span class="value" id="algo1-factor-value">0</span>
+        </label>
+      </div>
+      <div class="block">
+        <p class="legend mdf-muted">
+          Page views for the "Wisteria" Wikipedia article
+        </p>
+        <div class="chart-container">
+          <div class="chart" id="chart-1" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- BUCKET AGGREGATION -->
+      <h2 class="mdf-title3">Bucket Aggregation</h2>
+      <div class="form">
+        <label for="algo2-bucket-width">
+          Bucket width
+          <input
+            type="range"
+            id="algo2-bucket-width"
+            value="1"
+            min="1"
+            max="100"
+          />
+          <div>
+            <span class="value" id="algo2-bucket-width-value">1</span> days
+          </div>
+        </label>
+
+        <label for="algo2-bucket-algo">
+          Bucket algotithm
+          <select id="algo2-bucket-algo" value="max">
+            <option value="max">Max</option>
+            <option value="min">Min</option>
+            <option value="avg">Mean</option>
+          </select>
+        </label>
+      </div>
+      <div class="block">
+        <p class="legend mdf-muted">
+          Page views for the "Wisteria" Wikipedia article
+        </p>
+        <div class="chart-container">
+          <div class="chart" id="chart-2" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- BUCKET AGGREGATION -->
+      <h2 class="mdf-title3">Largest Triangle Three Buckets</h2>
+      <div class="form">
+        <label for="algo3-bucket-width">
+          Bucket width
+          <input
+            type="range"
+            id="algo3-bucket-width"
+            value="1"
+            min="1"
+            max="100"
+          />
+          <span class="value" id="algo3-bucket-width-value">1</span> days
+        </label>
+      </div>
+      <div class="block">
+        <p class="legend mdf-muted">
+          Page views for the "Wisteria" Wikipedia article
+        </p>
+        <div class="chart-container">
+          <div class="chart" id="chart-3" aria-hidden="true"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

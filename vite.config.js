@@ -28,6 +28,7 @@ export default defineConfig({
                 ['gooey-menu']: resolve(__dirname, 'examples/animation/gooey-menu/index.html'),
                 ['list-search']: resolve(__dirname, 'examples/animation/list-search/index.html'),
                 ['postcards']: resolve(__dirname, 'examples/animation/postcards/index.html'),
+                ['algos']: resolve(__dirname, 'examples/downsampling/algos/index.html'),
             }
         }
     }

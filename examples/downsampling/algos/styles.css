@@ -1,0 +1,43 @@
+h2 {
+    margin-top: 2rem;
+}
+
+.block {
+    background-color: var(--mdf-color-background-default);
+    border: 1px solid var(--mdf-color-border-default);
+    border-radius: 1rem;
+    margin: 2rem 0;
+    gap: 1rem;
+    padding: 1rem;
+
+    .legend {
+        text-align: center;
+    }
+
+    .chart-container {
+        height: 60vh;
+
+        .chart {
+            width: 100%;
+            height: 100%;
+
+            .line {
+                stroke: var(--mdf-color-text-brand-primary-default);
+            }
+
+            .tick:last-of-type line {
+                display: none;
+            }
+        }
+    }
+}
+
+.form {
+    margin: 1rem 0;
+
+    label {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+}
